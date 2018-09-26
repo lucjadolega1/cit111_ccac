@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package codingproject;
-
+import java.util.Scanner;
 /**
  *
  * @author lucja
@@ -13,38 +13,44 @@ public class JavaFirstProject {
     public static void main(String[] args){
         System.out.println("Should I buy a new car?");
         // Main question
-        int response1 = 20;
+        Scanner keyboardReader = new Scanner(System.in);
+        int response1;
+        int response2;
+        int response3;
         // value of response 1
         int compScore = 0;
         // compatability score: based on the user's response to questions 
         System.out.println("Do I have enough money? ( 0 = no, 20 = yes)" );
-        //Question 1 
+        // Question 1 
+        response1 = keyboardReader.nextInt();
         if(response1 == 20){
             compScore = compScore + 20;
             System.out.println("Yay, good news");
         } else { 
-            System.out.println("I hope you choose white car");
-        } // close if/else block
-        int response2 = 0;
+            System.out.println("Oops");
+        } // close if/else blocks
+       
         // value of response 2
         System.out.println("Do I really need a new car? ( 0 = no, 20 = yes)" );
         // Question 2 
+        response2 = keyboardReader.nextInt();
         if(response2 == 0){
             compScore = compScore + 0;
-            System.out.println("Heh, maybe you're right");
+            System.out.println("Okk!");
         } else {
-            System.out.println("You have to think about it");
-        } // close if/else block
-        int response3 = 20;
+            System.out.println("Eh, maybe the old one is good");
+        } // close if/else blocks
+      
         // value of response 3
         System.out.println("Am I gonna enjoy it? ( 0 = no, 20 = yes)" );
         // Question 3
+        response3 = keyboardReader.nextInt();
         if(response3 == 20){
             compScore = compScore + 20;
-            System.out.println("I think so");
+            System.out.println("Yaaay!Of course you're gonna enjoy it");
         } else {
-            System.out.println("It is your decision");
-        } // close if/else block
+            System.out.println("I think you would enjoy buying new car");
+        } // close if/else blocks
         
         if(compScore > 30 ){
             System.out.println("Good news, you should buy a new car");
