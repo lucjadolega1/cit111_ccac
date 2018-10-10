@@ -1,0 +1,58 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package mathcoding;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author lucja.dolega
+ */
+public class Mathprogram {
+
+    public static void main(String[] args) {
+        int Twobedroom;
+        int Onebedroom;
+        int Studio;
+        int compScore;
+        Scanner keyboardReader = new Scanner(System.in);
+        System.out.println("Please enter the amount under every question and press enter");
+        while (true) {
+            System.out.println("Can I afford two bedroom appartment? (enter monthly income)");
+            compScore = keyboardReader.nextInt();
+            if (compScore > 1000) {
+                System.out.println("Yay. Good news");
+            } else {
+                // if false
+                System.out.println("Whoops, you cannot afford it");
+            }
+            while (true) {
+                System.out.println("What about one bedroom apartment? (enter monthly income)");
+                compScore = keyboardReader.nextInt();
+                if (compScore >= 700) {
+                    System.out.println("Hey, take the luggage. You are gonna leave this place");
+                } else {
+                    // if false
+                    System.out.println("Ehh, you need more money");
+                }
+                while (true) {
+                    System.out.println("Maybe studio is a good idea ? (enter monthly income)");
+                    compScore = keyboardReader.nextInt();
+                    if (compScore <= 500) {
+                        System.out.println("Lucky you!");
+                    } else {
+                        // if false
+                        System.out.println("Sorry, you need go to work");
+                        {
+
+                        
+                    }
+                }
+                }
+        }
+        }
+    }
+}
