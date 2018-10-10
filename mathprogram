@@ -6,6 +6,7 @@
 package mathcoding;
 
 import java.util.Scanner;
+// import the scanner
 
 /**
  *
@@ -18,11 +19,14 @@ public class Mathprogram {
         int Onebedroom;
         int Studio;
         int compScore;
+        // depends on what number you enter 
         Scanner keyboardReader = new Scanner(System.in);
+        // enter/introduce the scanner
         System.out.println("Please enter the amount under every question and press enter");
         while (true) {
             System.out.println("Can I afford two bedroom appartment? (enter monthly income)");
             compScore = keyboardReader.nextInt();
+            // Scanner
             if (compScore > 1000) {
                 System.out.println("Yay. Good news");
             } else {
@@ -32,6 +36,7 @@ public class Mathprogram {
             while (true) {
                 System.out.println("What about one bedroom apartment? (enter monthly income)");
                 compScore = keyboardReader.nextInt();
+                // Scanner
                 if (compScore >= 700) {
                     System.out.println("Hey, take the luggage. You are gonna leave this place");
                 } else {
@@ -41,6 +46,7 @@ public class Mathprogram {
                 while (true) {
                     System.out.println("Maybe studio is a good idea ? (enter monthly income)");
                     compScore = keyboardReader.nextInt();
+                    // Scanner
                     if (compScore >= 500) {
                         System.out.println("Lucky you!");
                     } else {
