@@ -41,7 +41,7 @@ public class Mathprogram {
                 while (true) {
                     System.out.println("Maybe studio is a good idea ? (enter monthly income)");
                     compScore = keyboardReader.nextInt();
-                    if (compScore <= 500) {
+                    if (compScore >= 500) {
                         System.out.println("Lucky you!");
                     } else {
                         // if false
