@@ -7,7 +7,7 @@ package javaprint;
 
 /**
  *
- * @author konra
+ * @author lucja
  */
 public class Printstatement {
     public static void main(String[] args){
