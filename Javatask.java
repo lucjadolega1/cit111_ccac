@@ -7,7 +7,7 @@ package basicswitch;
 
 /**
  *
- * @author konra
+ * @author lucja
  */
 public class Javatask {
     public static void main(String[] args){
