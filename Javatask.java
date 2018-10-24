@@ -11,7 +11,7 @@ package basicswitch;
  */
 public class Javatask {
     public static void main(String[] args){
-        final int CHOICE = 123;
+        int CHOICE = 10;
         switch(CHOICE){
             case 1: 
                 System.out.println("You made your first choice");
@@ -20,7 +20,7 @@ public class Javatask {
                 System.out.println("You made your second choice");
                 break;
             case 10:
-                System.out.println("Cases can match all the values");
+                System.out.println("Great choice");
                 break;
             default: 
                 System.out.println("Default case");
