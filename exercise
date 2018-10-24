@@ -1,0 +1,27 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package newpackage;
+import java.util.Scanner;
+/**
+ *
+ * @author lucja.dolega
+ */
+public class Exercise {
+    public static void main(String[] args){
+        int age;
+        Scanner userInputScanner = new Scanner(System.in);
+        System.out.println("Enter your age and see if you are an adult");
+        age = userInputScanner.nextInt();
+        while(age>=21){
+            System.out.println("You are an adult");
+            if(age>21){
+                break;
+            }
+                age++;
+            }
+       System.out.println("Heeey");
+        }
+    }
