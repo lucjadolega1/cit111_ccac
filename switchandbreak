@@ -1,0 +1,37 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package newpackage;
+import java.util.Scanner;
+/**
+ *
+ * @author lucja.dolega
+ */
+public class Switchandbreak {
+    public static void main(String[] args){
+        int money;
+        money= 100;
+        Scanner userInputScanner = new Scanner(System.in);
+        
+        System.out.println("Can you buy new laptop?");
+        System.out.println("Enter the amount you have now");
+        money = userInputScanner.nextInt();
+        switch(money){
+            case 100:
+                System.out.println("Yes, you can buy a new laptop");
+                break;
+            case 50:
+                System.out.println("Noooo!");
+                break;
+            case 20:
+                System.out.println("Are you kidding me?");
+            default:
+                System.out.println("Nope, not yet");
+                
+                
+            
+        }
+    }
+}
