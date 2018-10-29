@@ -1,4 +1,5 @@
-/*
+
+   /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -14,22 +15,17 @@ public class MiniProject {
     /**
      * @param args the command line arguments
      */
-     
     public static void main(String[] args) {
-    // create main method 
-    Systen.out.println("xxxxxxxxxxxxxxxxxxxxxxxxxxxxx);
-    System.out.println("********Helloooooo!********"*);
+    System.out.println("********Helloooooo!********");
     System.out.println("I am your personal assistant");
-    System.out.println("xxxxxxxxxxxxxxxxxxxxxxxxxxxxx);
     int option;
-    // integer will receive user's input
+    int myMoney;
+    int dressPrice;
     Scanner userInputScanner = new Scanner(System.in);
-    // introduce the scanner to receive user's input
     System.out.println("Please choose option 1 or 2 and press enter: ");
     option = userInputScanner.nextInt();
     
     if(option==1){
-    // if option is equal 1 assistant will help you with sale price
         System.out.println("You chose option 1");
         
         System.out.println("I am here to check the item price with taxes");
@@ -40,17 +36,36 @@ public class MiniProject {
             salePrice = userInputScanner.nextDouble();
             priceWithTax = salePrice * (1 +sales_tax);
             System.out.println("Your item cost with tax: " + priceWithTax);
+            System.out.println(" $$$$$             $$$$");
+            System.out.println(" $   $             $  $ ");
+            System.out.println(" $$$$              $$$$");
+            
+            System.out.println("            $            ");
+            System.out.println(" $                    $");
+            System.out.println("   $              $");
+            System.out.println("     $        $");
+            System.out.println("         $ ");
     }
     
     
     else if (option==2){
-    // if you choose option 2 assistant will send you to customer service to get help
         System.out.println("You chose option 2");
        
         System.out.println("Go to customer service");
- 
-        } // close if/else block
-    } // close main method
+        
+        System.out.println("**********************");
+        System.out.println("xxxxxxxxxxxxxxxxxxxxxx");
+        System.out.println("*x                  x*");
+        System.out.println("*x                  x*");
+        System.out.println("*x      Dial #3     x*");
+        System.out.println("*x                  x*");
+        System.out.println("*x                  x*");
+        System.out.println("*x                  x*");
+        System.out.println("xxxxxxxxxxxxxxxxxxxxxx");
+        System.out.println("**********************");
+        }
+    }
     
     
-    } // close class
+    }
+    
