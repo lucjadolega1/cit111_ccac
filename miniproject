@@ -8,23 +8,24 @@ package project1;
 import java.util.Scanner;
 /**
  *
- * @author bogdan
+ * @author lucja
  */
 public class MiniProject {
 
     /**
      * @param args the command line arguments
      */
+     // create main method
     public static void main(String[] args) {
     System.out.println("********Helloooooo!********");
     System.out.println("I am your personal assistant");
+    // integer named option is based on user's input
     int option;
-    int myMoney;
-    int dressPrice;
+   // introduce scanner to get user's input
     Scanner userInputScanner = new Scanner(System.in);
     System.out.println("Please choose option 1 or 2 and press enter: ");
     option = userInputScanner.nextInt();
-    
+    // if you enter 1 you will get help with tax 
     if(option==1){
         System.out.println("You chose option 1");
         
@@ -47,7 +48,7 @@ public class MiniProject {
             System.out.println("         $ ");
     }
     
-    
+    // test what happens when you choose option 2 
     else if (option==2){
         System.out.println("You chose option 2");
        
@@ -63,9 +64,9 @@ public class MiniProject {
         System.out.println("*x                  x*");
         System.out.println("xxxxxxxxxxxxxxxxxxxxxx");
         System.out.println("**********************");
-        }
-    }
+        } // close if/else block
+    } // close main method
     
     
-    }
+    } // close class
     
