@@ -1,5 +1,5 @@
 
-  /*
+ /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -19,7 +19,7 @@ public class MiniProject {
      */
     public static void main(String[] args) {
   generateBigNumber();
-  
+  findOut();
     System.out.println("********Helloooooo!********");
     System.out.println("I am your personal assistant");
     int option;
@@ -68,6 +68,7 @@ public class MiniProject {
         System.out.println("*x                  x*");
         System.out.println("xxxxxxxxxxxxxxxxxxxxxx");
         System.out.println("**********************");
+        System.out.println(option);
         }
      
 
@@ -85,14 +86,16 @@ public class MiniProject {
         System.out.println(bigInt);        
         System.out.println("**********************************************");
         System.out.println("***************HEH****************************");
+        
     } // close method generateBigNumber
       
       public static void findOut(){
           Scanner keyboardScanner = new Scanner(System.in);
          int userNumber;
           System.out.println("Let's see if you can really win the prize");
-          System.out.println("Press enter and keep your fingers crossed");
+          System.out.println("Choose the number and press enter and keep your fingers crossed");
           userNumber = keyboardScanner.nextInt();
+          
 
           switch(userNumber){
               case 1: 
@@ -114,4 +117,3 @@ public class MiniProject {
         }
     }
 }
-    
