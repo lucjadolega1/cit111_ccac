@@ -1,119 +1,130 @@
 
+
  /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * This is a MiniProject class
+ * It's shopping assistant who helps to check the sale price with tax 
+ * and tell you what's the chance of winning free shopping
+ * The helper also check your number and tells if you won. 
+ * 
  */
 package project1;
+
 import java.util.Scanner;
 import java.util.Random;
 import java.math.BigInteger;
+
 /**
  *
  * @author lucja
  */
 public class MiniProject {
+// create method 1
 
-    /**
-     * @param args the command line arguments
-     */
+    public static void generateBigNumber() {
+        System.out.println("The possibilty that you can win free shopping");
+        // create random number generator
+        Random r = new Random();
+        // create an object
+        BigInteger bigInt = new BigInteger(20, r);
+        // display huge number
+        System.out.println(bigInt);
+        System.out.println("**********************************************");
+        System.out.println("***************HEH****************************");
+        System.out.println("Go to the next step, follow the door");
+        System.out.println("XXXXXXXXXXXXXXXXXXXXXXXXXXXX");
+        System.out.println("X                          X");
+        System.out.println("X                          X");
+        System.out.println("X                           ");
+        System.out.println("X                           ");
+        System.out.println("X                           ");
+        System.out.println("X             ------------------------->");
+        System.out.println("X                           ");
+        System.out.println("X                           ");
+        System.out.println("X                           ");
+        System.out.println("X                          X");
+        System.out.println("X                          X");
+        System.out.println("XXXXXXXXXXXXXXXXXXXXXXXXXXXX");
+    } // close method generateBigNumber
+    // create method 2
+
+    public static void findOut() {
+        Scanner keyboardScanner = new Scanner(System.in);
+        int userNumber;
+        System.out.println("Let's see if you can really win the prize");
+        System.out.println("Pick number and press enter(keep your fingers crossed)");
+        userNumber = keyboardScanner.nextInt();
+        // use switch blocks 
+        switch (userNumber) {
+            case 1:
+                System.out.println("Very close but no win");
+
+                break;
+            case 5:
+                System.out.println("Nope, maybe next time");
+                break;
+            case 16:
+                System.out.println("That's it. You're lucky. You won");
+                break;
+            default:
+                System.out.println("At least you were trying");
+
+        } // close switch block
+    } // close method 
+    // create method 3
+
     public static void main(String[] args) {
-  generateBigNumber();
-  findOut();
-    System.out.println("********Helloooooo!********");
-    System.out.println("I am your personal assistant");
-    int option;
-    int myMoney;
-    int dressPrice;
-    Scanner userInputScanner = new Scanner(System.in);
-    System.out.println("Please choose option 1 or 2 and press enter: ");
-    option = userInputScanner.nextInt();
-    
-    if(option==1){
-        System.out.println("You chose option 1");
-        
-        System.out.println("I am here to check the item price with taxes");
-       double salePrice;
-    double priceWithTax;
-   final double sales_tax = 0.04;
-    System.out.println("Enter the sale price: ");
+
+        generateBigNumber();
+        findOut();
+
+        System.out.println("********Helloooooo!********");
+        System.out.println("I am your personal assistant");
+        // create integers 
+        int option;
+        int myMoney;
+        int dressPrice;
+        // create scanner to receive user's input 
+        Scanner userInputScanner = new Scanner(System.in);
+        System.out.println("Please choose option 1 or 2 and press enter: ");
+        option = userInputScanner.nextInt();
+
+        if (option == 1) {
+            System.out.println("You chose option 1");
+
+            System.out.println("I am here to check the item price with taxes");
+            double salePrice;
+            double priceWithTax;
+            final double sales_tax = 0.04;
+            System.out.println("Enter the sale price: ");
             salePrice = userInputScanner.nextDouble();
-            priceWithTax = salePrice * (1 +sales_tax);
+            priceWithTax = salePrice * (1 + sales_tax);
             System.out.println("Your item cost with tax: " + priceWithTax);
+
             System.out.println(" $$$$$             $$$$");
             System.out.println(" $   $             $  $ ");
             System.out.println(" $$$$              $$$$");
-            
+
             System.out.println("            $            ");
             System.out.println(" $                    $");
             System.out.println("   $              $");
             System.out.println("     $        $");
             System.out.println("         $ ");
-    }
-    
-        
-    
-    else if (option==2){
-        System.out.println("You chose option 2");
-       
-        System.out.println("Go to customer service");
-        
-        System.out.println("**********************");
-        System.out.println("xxxxxxxxxxxxxxxxxxxxxx");
-        System.out.println("*x                  x*");
-        System.out.println("*x                  x*");
-        System.out.println("*x      Dial #3     x*");
-        System.out.println("*x                  x*");
-        System.out.println("*x                  x*");
-        System.out.println("*x                  x*");
-        System.out.println("xxxxxxxxxxxxxxxxxxxxxx");
-        System.out.println("**********************");
-        System.out.println(option);
-        }
-     
+        } else if (option == 2) {
+            System.out.println("You chose option 2");
 
-    /**
-     *
-     */
+            System.out.println("Go to customer service");
 
-    public static void generateBigNumber(){
-        System.out.println("The possibilty that you can win free shopping");
-        // create a friendly random number generator
-        Random r = new Random();
-        // create an object to do math with huge numbers
-        BigInteger bigInt = new BigInteger(20, r);
-        // display the randomly generated huge number
-        System.out.println(bigInt);        
-        System.out.println("**********************************************");
-        System.out.println("***************HEH****************************");
-        
-    } // close method generateBigNumber
-      
-      public static void findOut(){
-          Scanner keyboardScanner = new Scanner(System.in);
-         int userNumber;
-          System.out.println("Let's see if you can really win the prize");
-          System.out.println("Choose the number and press enter and keep your fingers crossed");
-          userNumber = keyboardScanner.nextInt();
-          
+            System.out.println("**********************");
+            System.out.println("xxxxxxxxxxxxxxxxxxxxxx");
+            System.out.println("*x                  x*");
+            System.out.println("*x                  x*");
+            System.out.println("*x      Dial #3     x*");
+            System.out.println("*x                  x*");
+            System.out.println("*x                  x*");
+            System.out.println("*x                  x*");
+            System.out.println("xxxxxxxxxxxxxxxxxxxxxx");
+            System.out.println("**********************");
+        } // close if/else block
+    } // close method
 
-          switch(userNumber){
-              case 1: 
-                  System.out.println("Very close but no win");
-                  
-                  break;
-              case 5:
-                  System.out.println("Nope, maybe next time");
-                  break;
-              case 16:
-                  System.out.println("That's it. You're lucky. You won");
-                  break;
-              default:
-                  System.out.println("At least you were trying");
-         
-                  
-
-  
-        }
-    }
-}
+} // close class
