@@ -1,0 +1,36 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package createtabulator;
+
+/**
+ *
+ * @author lucja
+ */
+public class OrderTabulator {
+    private static int totalPolishKielbasa = 0;
+    private static int totalPolishPotatoPancake = 0;
+    private static int totalOrdered = 0;
+    
+    public static void main(String[] args){
+        System.out.println("*******YOUR ORDER***********");
+    } // close main
+    public static void orderPolishKielbasa (int withFries, int withoutFries){
+        if(withFries>=1){
+            System.out.println("You are gonna love it");
+            totalPolishKielbasa = totalPolishKielbasa + withFries;
+            
+        }
+    } // close method
+    public static void orderPolishPotatoPancake (int withSos, int withoutSos){
+        
+    } // close method
+    public static void mixedOrder( int KielbasaandPancakes){
+    }
+            
+    public static void printOrder(){
+        
+    } // close method
+} // close class
