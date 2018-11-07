@@ -1,7 +1,7 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * This is a order tabulator
+ * Main dishes: Polish Kielbasa, Polish Potato Pancake
+ * Tabulator counts what you order and how many dishes
  */
 package createtabulator;
 
@@ -18,13 +18,31 @@ public class OrderTabulator {
         System.out.println("*******YOUR ORDER***********");
     } // close main
     public static void orderPolishKielbasa (int withFries, int withoutFries){
+        System.out.println("Amount of Polish Kielbasa");
+        System.out.println("Witch fries: ");
+        // users input
+        System.out.println("Without fries: ");
+        // users input
+        
         if(withFries>=1){
+            System.out.println("********************");
             System.out.println("You are gonna love it");
+        } else{ 
+            System.out.println(" Polish Kielbasa without fries is good too");
+            System.out.println("********************");
+            System.out.println("You order is: ");
+            System.out.println("...count amount each order with or without fries");
             totalPolishKielbasa = totalPolishKielbasa + withFries;
             
         }
     } // close method
     public static void orderPolishPotatoPancake (int withSos, int withoutSos){
+        System.out.println("Amount of Polish Potato Panckaes");
+        System.out.println("Witch Sos: ");
+        // users input
+        
+        System.out.println("Without Sos: ");
+        // users input
         
     } // close method
     public static void mixedOrder( int KielbasaandPancakes){
