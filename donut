@@ -1,0 +1,71 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package objects;
+
+/**
+ *
+ * @author lucja.dolega
+ */
+public class DonutLand {
+    public static void main(String[] args){
+        // create a var of type donut called firstdonut
+       
+        Donut firstDonut;
+        firstDonut = new Donut();
+        firstDonut.name = "Whatever";
+        System.out.println(firstDonut.getPercRemaining());
+        // wouldnt show anything but with system out... showed getPerc....
+        System.out.println(firstDonut.name);
+        firstDonut.simulateEating(12);
+         System.out.println(firstDonut.getPercRemaining());
+         Donut secondDonut = new Donut();
+         secondDonut.attracitveness = "perfect";
+         secondDonut.size = "tiny";
+         secondDonut.flovor = "chocolate";
+         secondDonut.powder = "yes";
+         System.out.println(secondDonut.attracitveness);
+         
+    }
+}
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package objects;
+
+/**
+ *
+ * @author lucja.dolega
+ */
+public class Donut {
+    // member variables
+    private int percRemaining = 100; 
+    public String name;
+    public String attracitveness;
+    public String size;
+    public String flovor;
+    public String powder;
+    
+// method: takes in an integer representing the size of bite
+// being taken of this donut. returns nothing
+public void simulateEating (int percentEaten){
+    System.out.println("I'm " + name + "and" + percentEaten + "% of me is getting eaten!");
+    // subtract the bite size from existing donut percent remaining
+percRemaining = percRemaining - percentEaten;
+
+} // close method
+
+public int getPercRemaining(){
+    // very simple guts: just send back the value of one of object's
+    // remember variables to the calling method. this is called a "getter"
+return percRemaining;
+} // close method
+// there is no main () method in this class!
+// we must take this object with the new keyword inside another class
+// in order for this class to do anything
+
+} // close class
