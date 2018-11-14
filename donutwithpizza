@@ -19,7 +19,7 @@ public class Pizza {
     int macaroniandcheese;
     private int percRemaining = 30;
 
-    public void simulateEating(int percentEaten) {
+    public void eatPizza(int percentEaten) {
         percRemaining = percRemaining - percentEaten;
 
     } // close method 
@@ -85,7 +85,7 @@ public class PizzaLand {
         System.out.println("Vegeterian mix is: " + mixOfTwo.vegeterian + "$");
         System.out.println("Other mix 1 is: " + delicious.hawaiian + delicious.chickenalfredo / 333 + "$");
         System.out.println("Other mix 2 is: " + delicious.chicken + delicious.chickenalfredo / 333 + "$");
-
+        System.out.println("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
         System.out.println("You ate: " + delicious.getPercRemaining() + " % of your pizza so far ");
         System.out.println("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
         System.out.println("The biggest size of your bite is: " + bigBiteSize + "\n" + "and do not stop trying");
