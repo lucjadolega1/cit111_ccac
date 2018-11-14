@@ -1,7 +1,7 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * This program presents donut idea codes
+ * It's about ordering pizza and mixing their tastes
+ * 
  */
 package donutidea;
 
@@ -10,57 +10,84 @@ package donutidea;
  * @author lucja
  */
 public class Pizza {
-int chicken;
-int hawaiian;
-int vegeterian;
-int chickenalfredo;
-int macaroniandcheese;
-   
-}
+    // make integers that present tastes of pizzas
+
+    int chicken;
+    int hawaiian;
+    int vegeterian;
+    int chickenalfredo;
+    int macaroniandcheese;
+    private int percRemaining = 30;
+
+    public void simulateEating(int percentEaten) {
+        percRemaining = percRemaining - percentEaten;
+
+    } // close method 
+
+    public int getPercRemaining() {
+        return percRemaining;
+    } // close method 
+    // no main in this class 
+
+} // close class
 
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * It is second class that contains main method
+ * making objects / showing prices / mixing pizzas
+ * 
  */
 package donutidea;
 
 /**
  *
- * @author konra
+ * @author lucja
  */
 public class PizzaLand {
-    public static void main(String[] args){
-        Pizza delicious = new Pizza(); 
+
+    // create main method
+    public static void main(String[] args) {
+        // create objects
+        Pizza delicious = new Pizza();
         Pizza mixOfTwo = new Pizza();
-        
-        int other;
-        
+
+        final int bigBiteSize = 13;
+
+        // enter the prices to each type of pizza
         delicious.chicken = 12;
         delicious.hawaiian = 13;
         delicious.vegeterian = 15;
         delicious.chickenalfredo = 17;
         delicious.macaroniandcheese = 16;
+
+        // Present types of pizzas and their prices
         System.out.println("Chicken pizza is: " + delicious.chicken + "$");
         System.out.println("Hawaiian pizza is: " + delicious.hawaiian + "$");
         System.out.println("Vegeterian pizza is: " + delicious.vegeterian + "$");
         System.out.println("Chicken alfredo pizza is: " + delicious.chickenalfredo + "$");
         System.out.println("Macaroni and cheese pizza is: " + delicious.macaroniandcheese + "$");
-        
+        // present mixes made by restaurant 
         mixOfTwo.chicken = delicious.chicken + delicious.chickenalfredo - 7;
         mixOfTwo.vegeterian = delicious.vegeterian + delicious.macaroniandcheese - 5;
-        
-        
+
+        System.out.println("***************************************************");
+
+        // explain what mixes are available
         System.out.println(" You can order pizza: chicken, hawaiian, vegeterian, chicken alfredo or macaroni and cheese");
         System.out.println("You have to mix two pizzas so you get both types");
+        System.out.println("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
         System.out.println("Mix of two including chicken : Basic chicken pizza and chicken alfredo piza");
         System.out.println("Mix of two including vegeterian recepies: Bsic vegeterian pizz and macroni and cheese pizza");
         System.out.println("Other mixes contain surprie.");
-        
+
+        System.out.println("***************************************************");
+        // give the prices of mixed pizzas
         System.out.println("Chicken mix is: " + mixOfTwo.chicken + "$");
         System.out.println("Vegeterian mix is: " + mixOfTwo.vegeterian + "$");
         System.out.println("Other mix 1 is: " + delicious.hawaiian + delicious.chickenalfredo / 333 + "$");
         System.out.println("Other mix 2 is: " + delicious.chicken + delicious.chickenalfredo / 333 + "$");
-        
-    }
-}
+
+        System.out.println("You ate: " + delicious.getPercRemaining() + " % of your pizza so far ");
+        System.out.println("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
+        System.out.println("The biggest size of your bite is: " + bigBiteSize + "\n" + "and do not stop trying");
+    } // close method
+} // close class
