@@ -1,0 +1,122 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package createcar;
+
+/**
+ *
+ * @author lucja.dolega
+ */
+public class Car {
+
+    // introduce member variabler
+    public int year;
+    public String color;
+    boolean isCarDriveable;
+    double price;
+
+    // first method checks if car is driveable
+    public void checkCar() {
+        // return true
+        isCarDriveable = true;
+        System.out.println("****The car is working****");
+        System.out.println();
+        System.out.println("Whooops");
+        System.out.println();
+    } // close method
+// second method checks car again
+
+    public void checkAgain() {
+        // return false: car is not working
+        isCarDriveable = false;
+        System.out.println("rythgnnnhg ... (Engine stopped)");
+
+    } // close method
+    // third method shows the price
+
+    public double getPrice(int money) {
+        price = price - money;
+        return price;
+    } // close method
+} // close class
+
+
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package createcar;
+
+/**
+ *
+ * @author lucja.dolega
+ */
+public class CarLand {
+
+    // create main method
+    public static void main(String[] args) {
+        // create object
+
+        Car dream = new Car();
+        Car crazy = new Car();
+
+        dream.year = 2012;
+        dream.color = "Black";
+        dream.price = 4500;
+
+        crazy.year = 1998;
+        crazy.color = "Purple";
+        crazy.price = 12234;
+
+        displayYearColorPriceDream(dream);
+        dream.checkCar();
+        dream.checkAgain();
+        showYearColorPriceCrazy(crazy);
+
+    } // close main method 
+
+    public static void displayYearColorPriceDream(Car anycar) {
+        // Display year
+        System.out.println("What is the year of DREAM car?");
+        System.out.println("*****************************");
+        System.out.println("XXXX YEAR: " + anycar.year + " XXXX ");
+        // display color
+        System.out.println("-----------------------------");
+        System.out.println("What is the color of DREAM car?");
+        System.out.println("*****************************");
+        System.out.println("XXXX COLOR: " + anycar.color + " XXXX ");
+        // display price
+        System.out.println("What is the price of DREAM car? ");
+        System.out.println("****************************");
+        System.out.println("XXXX PRICE: " + anycar.price + " XXXX ");
+        System.out.println("----------------------------");
+
+        System.out.println();
+    } // close method 
+
+    public static void showYearColorPriceCrazy(Car other) {
+        // display year 
+        System.out.println();
+        System.out.println("What is the year of CRAZY car?");
+        System.out.println("*****************************");
+        System.out.println("XXXX YEAR: " + other.year + " XXXX ");
+        System.out.println("-----------------------------");
+        // display color
+        System.out.println("What is the color of CRAZY car?");
+        System.out.println("XXXX COLOR: " + other.color + " XXXX ");
+        System.out.println("*****************************");
+        // display price 
+        System.out.println("What is the price of CRAZY car?");
+        System.out.println("*****************************");
+        System.out.println("XXXX PRICE: " + other.price + " XXXX ");
+
+        System.out.println();
+
+    } // close method
+
+} // close class
+
+
