@@ -1,0 +1,43 @@
+/*
+ * This is personal assistant 
+ * This checks: 1.weather( humid, chance of rain, ....
+ * 2.....
+ * 3....
+ */
+package assistant;
+import java.util.Scanner;
+/**
+ *
+ * @author lucja
+ */
+public class PersonalAssistant {
+    
+   //create main method
+    public static void main(String[] args){
+        //create integer
+        int temp;
+        //scanner object that will give you users input
+        Scanner userInputScanner = new Scanner(System.in);
+        System.out.println("Let's see what the weather gonna look like today");
+        System.out.println("***Check humidity***");
+        System.out.println("TEMP: ");
+        
+         temp = userInputScanner.nextInt();
+         while(temp>=10){
+             //if temp is equal to 75 F degrees or is greater than 75 F
+             // you will feel the humid in the air
+             System.out.println("Humidity level is 30% or above");
+             System.out.println("30%-50% is good humidity lever for you");
+             break;
+         } //close while
+         temp--;
+    
+             if(temp<=0){
+                 System.out.println("Humidity level is: 25% or below");
+                 System.out.println("Humidity is low");
+                 
+             } // close if
+             
+             
+         }
+}
