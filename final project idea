@@ -1,6 +1,6 @@
 /*
  * This is personal assistant 
- * This checks: 1.weather( humid, chance of rain, ....
+ * This checks: 
  * 2.....
  * 3....
  */
@@ -27,28 +27,83 @@ public class PersonalAssistant {
         int itemPrice;
       // int for money you can spend after checking credit card limit and balance
         int moneyLeft;
+        System.out.println("It is a beautiful day for schopping today");
+        printStatement();
+        System.out.println("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
+        System.out.println("I am your personal assistant");
+        System.out.println("OPTION 1");
+        System.out.println("I will help you to check if you can buy any item basing on your credit card limit");
         
         // create scanner object 
         Scanner userInputScanner = new Scanner(System.in); 
         System.out.println("What is your credit card limit? Enter amount: ");
         cardLimit=userInputScanner.nextInt();
-        System.out.println("Let's see if you can buy this item");
-        System.out.println("Enter item price: ");
-        itemPrice = userInputScanner.nextInt();
+        
         System.out.println("Now enter current balance: ");
         currentBalance = userInputScanner.nextInt();
         // check how much money you can spend for shopping 
          moneyLeft = cardLimit - currentBalance;
-        System.out.println("Yo have " + moneyLeft + " left after the purchase");
+        System.out.println("You have " + moneyLeft );
+        System.out.println("Let's see if you can buy this item");
+        System.out.println("Enter item price: ");
+        itemPrice = userInputScanner.nextInt();
         // check if you can buy item basing on money you have left on credit card
-        if (itemPrice > currentBalance ) {
+        if (itemPrice > moneyLeft ) {
             System.out.println("You can not buy it");
+            System.out.println();
+            System.out.println(" $$$$$             $$$$");
+            System.out.println(" $   $             $  $ ");
+            System.out.println(" $$$$              $$$$");
+
+            System.out.println("                        ");
+            
+             System.out.println("            $ ");
+             System.out.println("      $           $");
+             System.out.println("   $                $");
+             System.out.println(" $                     $");
+             System.out.println("                         ");
+             
         } else { 
             System.out.println("You can buy it, YAY");
+            System.out.println();
+            System.out.println(" $$$$$             $$$$");
+            System.out.println(" $   $             $  $ ");
+            System.out.println(" $$$$              $$$$");
+
+            System.out.println("                       ");
+            System.out.println(" $                    $");
+            System.out.println("   $              $");
+            System.out.println("     $        $");
+            System.out.println("         $ ");
         } // close else 
         
 } // close method 
-    
+        public static void printStatement(){
+            System.out.println("Isn't it?");
+            System.out.println("***************************");
+        }
+        // new method 
+    public void priceWithTax ( ){
+        // create variables 
+        // 0.06 is sales tax 
+        double sTax = 0.06;
+        double price;
+        double PRICE_WITH_TAX;
+        
+        // create Scanner object to get user's imput
+        
+        Scanner userInputScanner = new Scanner(System.in);
+        System.out.println("OPTION 2");
+        System.out.println(" *** I can check your sale price with tax ***");
+        System.out.println(" Enter sale price and press enter");
+        price = userInputScanner.nextDouble();
+        // 
+        PRICE_WITH_TAX = price * (1 + sTax);
+       // print out the price
+       System.out.println("Your item price + 6% tax is: $" + PRICE_WITH_TAX);
+       System.out.println("*************************************");
+        
+    } // close method 
 } // close class
 
 
@@ -58,8 +113,6 @@ public class PersonalAssistant {
  * and open the template in the editor.
  */
 package assistant;
-
-import java.util.Scanner;
 
 /**
  *
@@ -71,35 +124,10 @@ public class DoTasks {
         //create integer
       PersonalAssistant p = new PersonalAssistant();
      PersonalAssistant r = new PersonalAssistant();
+     PersonalAssistant o = new PersonalAssistant();
       r.displayAbility();
        p.canIBuyIt();
-       // int i is for temperature
-        int temp;
-        
-        //scanner object that will give you user's input
-        Scanner userInputScanner = new Scanner(System.in);
-        System.out.println("Let's see what the weather gonna look like today");
-        System.out.println("***Check humidity***");
-        System.out.println("TEMP: ");
-        
-         temp = userInputScanner.nextInt();
-         while(temp>=10){
-             //if temp is 10 or greater than 10 
-             // humidity level will be 30% or above 
-             System.out.println("Humidity level is 30% or above");
-             System.out.println("30%-50% is good humidity lever for you");
-             break;
-         } //close while
-         temp--;
-    
-             if(temp<=0){
-                 System.out.println("Humidity level is: 25% or below");
-                 System.out.println("Humidity is low.It's not good for you");
-                 
-             } // close if
+      o.priceWithTax();
              
          } // close main method
-    
-    
-} // close class
 
