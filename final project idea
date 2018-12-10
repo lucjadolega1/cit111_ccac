@@ -1,133 +1,284 @@
 /*
+
  * This is personal assistant 
+
  * This checks: 
+
  * 2.....
+
  * 3....
+
  */
+
 package assistant;
+
 import java.util.Scanner;
+
 /**
+
  *
+
  * @author lucja
+
  */
+
 public class PersonalAssistant {
+
     // this checks if you can buy any item at store basing on your credit card limit and your current balance
+
  public void displayAbility(){
+
      // check: how much money you have left basing on card limit and current balance
+
      
+
         
+
     }
+
         public void canIBuyIt() {
+
             // check: if you can buy item basing on your balance and card limit
+
             // integer presents limit on credit card
+
         int cardLimit ;
+
         // int for current balance on credit card 
+
         int currentBalance ;
+
         // int presents price of item 
+
         int itemPrice;
+
       // int for money you can spend after checking credit card limit and balance
+
         int moneyLeft;
+
         System.out.println("It is a beautiful day for schopping today");
+
         printStatement();
+
         System.out.println("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
+
         System.out.println("I am your personal assistant");
+
         System.out.println("OPTION 1");
+
         System.out.println("I will help you to check if you can buy any item basing on your credit card limit");
+
         
+
         // create scanner object 
+
         Scanner userInputScanner = new Scanner(System.in); 
+
         System.out.println("What is your credit card limit? Enter amount: ");
+
         cardLimit=userInputScanner.nextInt();
+
         
+
         System.out.println("Now enter current balance: ");
+
         currentBalance = userInputScanner.nextInt();
+
         // check how much money you can spend for shopping 
+
          moneyLeft = cardLimit - currentBalance;
+
         System.out.println("You have " + moneyLeft );
+
         System.out.println("Let's see if you can buy this item");
+
         System.out.println("Enter item price: ");
+
         itemPrice = userInputScanner.nextInt();
+
         // check if you can buy item basing on money you have left on credit card
+
         if (itemPrice > moneyLeft ) {
+
             System.out.println("You can not buy it");
+
             System.out.println();
+
             System.out.println(" $$$$$             $$$$");
+
             System.out.println(" $   $             $  $ ");
+
             System.out.println(" $$$$              $$$$");
+
+
 
             System.out.println("                        ");
+
             
+
              System.out.println("            $ ");
+
              System.out.println("      $           $");
+
              System.out.println("   $                $");
+
              System.out.println(" $                     $");
+
              System.out.println("                         ");
+
              
+
         } else { 
+
             System.out.println("You can buy it, YAY");
+
             System.out.println();
+
             System.out.println(" $$$$$             $$$$");
+
             System.out.println(" $   $             $  $ ");
+
             System.out.println(" $$$$              $$$$");
 
+
+
             System.out.println("                       ");
+
             System.out.println(" $                    $");
+
             System.out.println("   $              $");
+
             System.out.println("     $        $");
+
             System.out.println("         $ ");
+
         } // close else 
+
         
+
 } // close method 
+
         public static void printStatement(){
+
             System.out.println("Isn't it?");
+
             System.out.println("***************************");
+
         }
-        // new method 
-    public void priceWithTax ( ){
-        // create variables 
-        // 0.06 is sales tax 
-        double sTax = 0.06;
-        double price;
-        double PRICE_WITH_TAX;
-        
-        // create Scanner object to get user's imput
-        
+
+        // new method that can check price with discount  
+    public void checkDiscount (){
+        double originalPrice;
+        double rate;
+        double discount;
+        double salePrice;
+        System.out.println("OPTION 2: Let's check the discount and sale price of your item");
         Scanner userInputScanner = new Scanner(System.in);
-        System.out.println("OPTION 2");
-        System.out.println(" *** I can check your sale price with tax ***");
-        System.out.println(" Enter sale price and press enter");
-        price = userInputScanner.nextDouble();
-        // 
-        PRICE_WITH_TAX = price * (1 + sTax);
-       // print out the price
-       System.out.println("Your item price + 6% tax is: $" + PRICE_WITH_TAX);
-       System.out.println("*************************************");
+        System.out.println("Please enter original price and press enter");
+        originalPrice = userInputScanner.nextDouble();
+        System.out.println("Now, enter the discount (% off) ");
+        rate = userInputScanner.nextDouble();
         
+        discount = (rate / 100 )*  originalPrice ;
+        System.out.println("Awesome, your discount is: " + discount);
+        
+        salePrice = originalPrice - discount;
+        System.out.println("And finally, your sale price is: " + salePrice);
     } // close method 
+        // new method 
+
+    public void priceWithTax ( ){
+
+        // create variables 
+
+        // 0.06 is sales tax 
+
+        double sTax = 0.06;
+
+        double price;
+
+        double PRICE_WITH_TAX;
+
+        
+
+        // create Scanner object to get user's imput
+
+        
+
+        Scanner userInputScanner = new Scanner(System.in);
+
+        System.out.println("OPTION 3");
+
+        System.out.println(" *** I can check your sale price with tax ***");
+
+        System.out.println(" Enter sale price and press enter");
+
+        price = userInputScanner.nextDouble();
+
+        // 
+
+        PRICE_WITH_TAX = price * (1 + sTax);
+
+       // print out the price
+
+       System.out.println("Your item price + 6% tax is: $" + PRICE_WITH_TAX);
+
+       System.out.println("*************************************");
+
+        
+
+    } // close method 
+
+    
 } // close class
 
 
+
+
 /*
+
  * To change this license header, choose License Headers in Project Properties.
+
  * To change this template file, choose Tools | Templates
+
  * and open the template in the editor.
+
  */
+
 package assistant;
 
-/**
- *
- * @author lucja
- */
-public class DoTasks {
-     //create main method
-    public static void main(String[] args){
-        //create integer
-      PersonalAssistant p = new PersonalAssistant();
-     PersonalAssistant r = new PersonalAssistant();
-     PersonalAssistant o = new PersonalAssistant();
-      r.displayAbility();
-       p.canIBuyIt();
-      o.priceWithTax();
-             
-         } // close main method
 
+
+/**
+
+ *
+
+ * @author lucja
+
+ */
+
+public class DoTasks {
+
+     //create main method
+
+    public static void main(String[] args){
+
+        //create integer
+
+      PersonalAssistant p = new PersonalAssistant();
+
+     PersonalAssistant r = new PersonalAssistant();
+
+     PersonalAssistant o = new PersonalAssistant();
+     PersonalAssistant y = new PersonalAssistant ();
+
+      r.displayAbility();
+
+       p.canIBuyIt();
+       y.checkDiscount();
+      o.priceWithTax();
+
+             
+
+         } // close main method
+} // close class
