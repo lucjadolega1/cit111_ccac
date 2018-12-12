@@ -40,20 +40,24 @@ public class PersonalAssistant {
         double moneyLeft;
 
         System.out.println("It is a beautiful day for shopping today");
+        
+        System.out.println();
 
         printStatement();
 
-        System.out.println("xxxxxxxxxxxxxxxxxxxxxxxxxxx");
+        System.out.println("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
 
-        System.out.println("I am your personal assistant");
+        System.out.println();
 
         System.out.println("OPTION 1");
 
-        System.out.println("I will help you to check if you can buy any item basing on your credit card limit");
+        System.out.println("***I will help you to check if you can buy any \n item basing on your credit card limit***");
 
         // create scanner object 
         Scanner userInputScanner = new Scanner(System.in);
-
+        
+        System.out.println();
+        
         System.out.println("What is your credit card limit? Enter amount: ");
 
         cardLimit = userInputScanner.nextInt();
@@ -98,6 +102,7 @@ public class PersonalAssistant {
 
             System.out.println("                         ");
 
+
         } else {
 
             System.out.println("You can buy it, YAY");
@@ -110,27 +115,33 @@ public class PersonalAssistant {
 
             System.out.println(" $$$$              $$$$");
 
-            System.out.println("                       ");
+            System.out.println("                        ");
 
-            System.out.println(" $                    $");
+            System.out.println(" $                     $");
 
-            System.out.println("   $              $");
+            System.out.println("   $               $");
 
-            System.out.println("     $        $");
+            System.out.println("      $         $");
 
-            System.out.println("         $ ");
+            System.out.println("          $ ");
 
+            System.out.println();
+            
         } // close else 
 
     } // close method 
 
     public static void printStatement() {
-
+        
         System.out.println("Isn't it?");
+        
+        System.out.println();
 
-        System.out.println("***************************");
-
-    }
+        System.out.println("xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
+        
+        System.out.println("      I am your personal assistant      ");
+        
+    } // close method 
 
     // new method that can check price with discount  
     public void checkDiscount() {
@@ -147,8 +158,12 @@ public class PersonalAssistant {
         // sale price after discount
         double salePrice;
 
-        System.out.println("OPTION 2: Let's check the discount and sale price of your item");
-
+        System.out.println();
+        
+        System.out.println("OPTION 2 \n***Let's check the discount and sale price of your item***");
+        
+        System.out.println();
+        
         Scanner userInputScanner = new Scanner(System.in);
 
         System.out.println("Please enter original price and press enter");
@@ -186,14 +201,18 @@ public class PersonalAssistant {
 
         // create Scanner object to get user's imput
         Scanner userInputScanner = new Scanner(System.in);
-
+        
+        System.out.println();
+        
         // option 3 check your sale price with tax. You can put the price that was check above with discount 
         // or you can just enter other price (which for example is not with discount)
         System.out.println("OPTION 3");
 
-        System.out.println(" *** I can check your sale price with tax ***");
+        System.out.println("***I can check your sale price with tax***");
+        
+        System.out.println();
 
-        System.out.println(" Enter sale price and press enter ");
+        System.out.println("Enter sale price and press enter");
 
         price = userInputScanner.nextDouble();
 
@@ -201,13 +220,57 @@ public class PersonalAssistant {
         PRICE_WITH_TAX = price * (1 + sTax);
 
         // print out the price 
-        System.out.println("Your item price + 6% tax is: $" + PRICE_WITH_TAX);
+        System.out.println("Your item price + 6% tax is: " + PRICE_WITH_TAX + "$");
 
         System.out.println("*************************************");
 
+    } // close method
+    
+    // new method check the 1 year monthly payment without intrest 
+    public void checkMonthlyPayment(){
+        
+        // price of item
+        double price;
+        
+        // every month payment(for 1 year)
+        double monthlyPayment;
+        
+        //create scanner
+        Scanner userInputScanner = new Scanner(System.in);
+        
+        System.out.println();
+        
+        System.out.println("OPTION 4");
+        
+        System.out.println("***I will check your monthly payment for item \n you decide to pay off in 1 year***");
+        
+        System.out.println();
+        
+        System.out.println("Please enter item price and press enter");
+        
+        price = userInputScanner.nextDouble();
+        
+        // count monthly payment 
+        monthlyPayment = price / 12;
+        
+        System.out.println("Your monthly payment is: " + monthlyPayment + "$");
+        
+    } // close method 
+    
+    public void theEnd (){
+        
+        System.out.println();
+        
+        System.out.println("Thank you for choosing your Personal Assistant");
+        
+        System.out.println("I hope you enjoy using the app");
+        
+        System.out.println("Have a good day");
+        
     } // close method 
 
 } // close class
+
 
 
 /*
@@ -234,18 +297,25 @@ public class DoTasks {
 
         // create objects
         PersonalAssistant p = new PersonalAssistant();
-
-        PersonalAssistant r = new PersonalAssistant();
+        
+        PersonalAssistant y = new PersonalAssistant();
 
         PersonalAssistant o = new PersonalAssistant();
 
-        PersonalAssistant y = new PersonalAssistant();
-
+        PersonalAssistant d = new PersonalAssistant();
+        
+        PersonalAssistant f = new PersonalAssistant();
+        
         p.canIBuyIt();
 
         y.checkDiscount();
 
         o.priceWithTax();
-
+        
+        d.checkMonthlyPayment();
+        
+        f.theEnd();
+        
     } // close main method
+    
 } // close class
