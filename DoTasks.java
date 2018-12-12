@@ -22,18 +22,25 @@ public class DoTasks {
 
         // create objects
         PersonalAssistant p = new PersonalAssistant();
-
-        PersonalAssistant r = new PersonalAssistant();
+        
+        PersonalAssistant y = new PersonalAssistant();
 
         PersonalAssistant o = new PersonalAssistant();
 
-        PersonalAssistant y = new PersonalAssistant();
-
+        PersonalAssistant d = new PersonalAssistant();
+        
+        PersonalAssistant f = new PersonalAssistant();
+        
         p.canIBuyIt();
 
         y.checkDiscount();
 
         o.priceWithTax();
-
+        
+        d.checkMonthlyPayment();
+        
+        f.theEnd();
+        
     } // close main method
+    
 } // close class
